@@ -13153,11 +13153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb\\BandWeb.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb\\BandWeb.csproj",
       "projectName": "BandWeb",
-      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb\\BandWeb.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb\\BandWeb.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13176,17 +13176,17 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb.DAL\\BandWeb.DAL.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb.DAL\\BandWeb.DAL.csproj"
+            "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb.DAL\\BandWeb.DAL.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb.DAL\\BandWeb.DAL.csproj"
             },
-            "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb.Factory\\BandWeb.Factory.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb.Factory\\BandWeb.Factory.csproj"
+            "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb.Factory\\BandWeb.Factory.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb.Factory\\BandWeb.Factory.csproj"
             },
-            "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb.Logic\\BandWeb.Logic.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb.Logic\\BandWeb.Logic.csproj"
+            "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb.Logic\\BandWeb.Logic.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb.Logic\\BandWeb.Logic.csproj"
             },
-            "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb.Models\\BandWeb.Models.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\BandWeb\\BandWeb.Models\\BandWeb.Models.csproj"
+            "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb.Models\\BandWeb.Models.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\BandWeb\\BandWeb.Models\\BandWeb.Models.csproj"
             }
           }
         }
