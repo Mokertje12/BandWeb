@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Http
+@using BandWeb.Models;
+@model BandWeb.Models.ViewModels.ArtistDetailViewModel;
+@{
+    ViewData["Title"] = "Detail";
+}
+<h2>Detail</h2>
+<br />
+<div class="col-sm-5">
+    <div class="adverContainer">
+        <h2>Monster</h2>
+        <div class="info">
+            <p><b>id:</b> @Model.Artist.id</p>
+            <p><b>Name:</b> @Model.Artist.name</p>
+            <p><b>Description:</b> @Model.Artist.description</p>
+            <p><b>Listeners:</b> @Model.Artist.listeners</p>
+        </div>
+    </div>
+</div>

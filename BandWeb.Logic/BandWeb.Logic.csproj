@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BandWeb.DAL\BandWeb.DAL.csproj" />
+    <ProjectReference Include="..\BandWeb.Models\BandWeb.Models.csproj" />
+  </ItemGroup>
+
+</Project>
