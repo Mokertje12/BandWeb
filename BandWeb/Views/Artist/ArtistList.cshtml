@@ -1,36 +1,96 @@
 ﻿@using BandWeb.Models
 @model BandWeb.Models.ViewModels.GetArtistViewModel
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "ArtistList";
 }
-<h2>ArtistList</h2>
-<br />
-<a class="a-iconhover" asp-controller="Artist" asp-action="ArtistForm">Add New Artist <span>+</span></a>
-<table style="width:50%;">
-    @if (Model.Artist.Count != 0)
-    {
-        <tr>
-            <th>ID</th>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Listeners</th>
-        </tr>
-        foreach (Artist art in Model.Artist)
-        {
-            <tr>
-                <td>@art.id</td>
-                <td style="text-align:center"><img src="@art.image_path" alt="@art.name" height="42" width="42"></td>
-                <td> <a asp-controller="Artist" asp-action="Detail" asp-route-id="@art.id" class="AdName hvr-underline-from-center">@art.name</a></td>
-                <td> <b>@art.description</b></td>
-                <td>@art.listeners</td>
-            </tr>
-        }
-    }
-    else
-    {
-        <p>Geen artiesten gevonden :(</p>
-    }
-</table>
 
+<br />
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <a asp-controller="Artist" asp-action="ArtistForm">New Artist <span>+</span></a>
+            <h1 class="my-4">Artists</h1>
+            <div class="list-group">
+                <b><a href="#" class="list-group-item">Pop</a></b>
+                <b><a href="#" class="list-group-item">Rock</a></b>
+                <b><a href="#" class="list-group-item">Jazz</a></b>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+        <div class="col-lg-9">
+            <div class="row">
+                @foreach (Artist art in Model.Artist)
+                {
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <p style="text-align:">
+                                <img class="card-img-top" style="border-radius: 50%;
+                                     background-image: url(@art.image_path);
+                                    height: 180px;
+                                    width: 180px;
+                                    background-position: center center;
+                                    background-size: cover;" alt="">
+                            </p>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a asp-controller="Artist" asp-action="Detail" asp-route-id="@art.id" class="">@art.name</a>
+                                </h4>
+                                <h5>@art.listeners Listeners</h5>
+                                <p class="card-text">@art.description</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.col-lg-9 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+@*<p>
+        <a asp-controller="Artist" asp-action="ArtistForm">New Artist <span>+</span></a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Listeners</th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Artist art in Model.Artist)
+            {
+                <tr>
+                    <td>
+                        @art.id
+                    </td>
+                    <td>
+                        <img height="42" width="42" src="@art.image_path" />
+                    </td>
+                    <td>
+                        @art.name
+                    </td>
+                    <td>
+                        @art.description
+                    </td>
+                    <td>
+                        @art.listeners
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@

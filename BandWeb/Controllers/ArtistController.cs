@@ -19,8 +19,7 @@ namespace BandWeb.Controllers
     {
         private readonly IArtistLogic _iartistLogic;
         private readonly IConfiguration _iconfiguration;
-
-        public ArtistController (IConfiguration configuration)
+        public ArtistController(IConfiguration configuration)
         {
             _iconfiguration = configuration;
             _iartistLogic = ArtistFactory.CreateSqlLogic(_iconfiguration);
@@ -35,7 +34,6 @@ namespace BandWeb.Controllers
             {
                 Artist = _iartistLogic.GetAllArtist().ToList(),
             };
-
             return View(model);
         }
         [HttpGet]
