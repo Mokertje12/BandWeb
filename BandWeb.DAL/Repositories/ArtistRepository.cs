@@ -16,7 +16,7 @@ namespace BandWeb.DAL.Repositories
         {
             return _iartistRepository.GetAllArtist();
         }
-        public Artist GetDetailArtist(string id)
+        public List<Artist> GetDetailArtist(string id)
         {
             return _iartistRepository.GetDetailArtist(id);
         }

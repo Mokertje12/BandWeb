@@ -23,29 +23,89 @@ namespace BandWeb.DAL.Contexts
 
         public IEnumerable<Artist> GetAllArtist()
         {
-            using (IDbConnection db = OpenConnection())
+            List<Artist> artistlist = new List<Artist>();
+            using (SqlConnection db = OpenConnection())
             {
                 db.Open();
-                string query = "SELECT * FROM dbo.Artist";
-                return db.Query<Artist>(query);
+                SqlCommand cmd = db.CreateCommand();
+                try
+                {
+                    cmd.CommandText =
+                        "SELECT * FROM dbo.Artist";
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string imagePath = "/images/" + reader.GetString(4);
+                                artistlist.Add(new Artist(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), imagePath));
+
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+
+                }
             }
+            return artistlist;
         }
-        public Artist GetDetailArtist(string id)
+        public List<Artist> GetDetailArtist(string id)
         {
-            using (IDbConnection db = OpenConnection())
+            List<Artist> artistlist = new List<Artist>();
+            using (SqlConnection db = OpenConnection())
             {
                 db.Open();
-                string query = $"SELECT * FROM Artist WHERE id = {id}";
-                return db.QuerySingle<Artist>(query);
+                SqlCommand cmd = db.CreateCommand();
+                try
+                {
+                    cmd.Parameters.AddWithValue("@ID", id);
+
+                    cmd.CommandText =
+                        "SELECT * FROM Artist WHERE id = @ID";
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string imagePath = "/images/" + reader.GetString(4);
+                                artistlist.Add(new Artist(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), imagePath));
+                                
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+
+                }
             }
+            return artistlist;
         }
         public void NewArtist(Artist art)
         {
-            using (IDbConnection db = OpenConnection())
+            using (SqlConnection db = OpenConnection())
             {
-                    string Query =
-                        $"INSERT INTO Artist VALUES('{art.name}', '{art.description}', '{art.listeners}', '{art.image_path}')";
-                    db.Execute(Query);
+                db.Open();
+                SqlCommand cmd = db.CreateCommand();
+                try
+                {
+                    cmd.Parameters.AddWithValue("@Name", art.name);
+                    cmd.Parameters.AddWithValue("@Description", art.description);
+                    cmd.Parameters.AddWithValue("@Listeners", art.listeners);
+                    cmd.Parameters.AddWithValue("@Image_Path", art.image_path);
+
+                    cmd.CommandText = 
+                        "INSERT INTO Artist (name, description, listeners, image_path) VALUES(@Name, @Description, @Listeners, @Image_Path)";
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+
+                }
             }
         }
     }

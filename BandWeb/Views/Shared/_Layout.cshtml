@@ -52,10 +52,10 @@
             </div>
             <div class="navbar-collapse collapse navbar-right">
                 <ul class="list-group">
-                    <li><a class="list-group-item" asp-area="" asp-controller="Home" asp-action="Index">Sign up</a></li>
+                    <li><a class="list-group-item" asp-area="" asp-controller="Account" asp-action="LoginPage">Sign up</a></li>
                 </ul>
             </div>
-        </div>
+        </div>  
     </nav>
     <div class="container body-content">
         @RenderBody()
@@ -80,6 +80,8 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
+        <script src="~/js/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
     @*<footer>

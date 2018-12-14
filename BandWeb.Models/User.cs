@@ -13,6 +13,16 @@ namespace BandWeb.Models
             public string streetname { get; set; }
             public int housenumber { get; set; }
             public string city { get; set; }
+
+            public User(string Name, string Email, string Password, string Streetname, int Housenumber, string City)
+            {
+                name = Name;
+                email = Email;
+                password = Password;
+                streetname = Streetname;
+                housenumber = Housenumber;
+                city = City;
+            }
             public User()
             {
 

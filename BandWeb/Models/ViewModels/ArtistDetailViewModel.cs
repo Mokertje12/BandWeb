@@ -8,6 +8,8 @@ namespace BandWeb.Models.ViewModels
 {
     public class ArtistDetailViewModel
     {
-        public Artist Artist { get; set; }
+        public List<Artist> Artist { get; set; }
+
+        public Artist artist { get; set; }
     }
 }

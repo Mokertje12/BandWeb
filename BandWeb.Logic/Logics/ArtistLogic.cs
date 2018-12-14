@@ -19,13 +19,11 @@ namespace BandWeb.Logic.Logics
         public IEnumerable<Artist> GetAllArtist()
         {
             List<Artist> artist = _artistrepo.GetAllArtist().AsList();
-            artist.ForEach(x => x.image_path = "/images/" + x.image_path);
             return artist;
         }
-        public Artist GetDetailArtist(string id)
+        public List<Artist> GetDetailArtist(string id)
         {
-            Artist artist = _artistrepo.GetDetailArtist(id);
-            artist.image_path = "/images/" + artist.image_path;
+            List<Artist> artist = _artistrepo.GetDetailArtist(id);
             return artist;
         }
         public void NewArtist(Artist art)

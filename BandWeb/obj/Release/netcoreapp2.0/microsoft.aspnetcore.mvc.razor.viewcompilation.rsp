@@ -1,0 +1,13 @@
+C:\Users\User\Documents\GitHub\BandWeb\BandWeb
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=BandWeb
+--content-root=C:\Users\User\Documents\GitHub\BandWeb\BandWeb
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\Artist\ArtistForm.cshtml
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\Artist\ArtistList.cshtml
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\Artist\Detail.cshtml
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\Home\Index.cshtml
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\Shared\Error.cshtml
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\Shared\_Layout.cshtml
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\_ViewImports.cshtml
+--file=C:\Users\User\Documents\GitHub\BandWeb\BandWeb\Views\_ViewStart.cshtml

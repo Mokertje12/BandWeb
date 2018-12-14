@@ -8,7 +8,7 @@ namespace BandWeb.DAL.Interfaces
     public interface IArtistRepository
     {
         IEnumerable<Artist> GetAllArtist();
-        Artist GetDetailArtist(string id);
+        List<Artist> GetDetailArtist(string id);
         void NewArtist(Artist art);
     }
 }

@@ -41,7 +41,7 @@ namespace BandWeb.Controllers
         {
             //var accObject = HttpContext.Session.GetString("Account");
 
-            Artist art = _iartistLogic.GetDetailArtist(id);
+            List<Artist> art = _iartistLogic.GetDetailArtist(id);
             ArtistDetailViewModel model = new ArtistDetailViewModel
             {
                 Artist = art,
@@ -50,7 +50,7 @@ namespace BandWeb.Controllers
         }
         [HttpPost]
         public async Task<IActionResult> Post(string nameArtist, string descriptionArtist,
-           string listenersArtist, IFormFile image_pathArtist)
+           int listenersArtist, IFormFile image_pathArtist)
         {
             try
             {
